@@ -1,13 +1,24 @@
 // GLOBAL VARIABLES
 // ===================================================
 var key = "ZeKnEFlNSXBStYoC3CKTGrP28TaRnps1";
-var gifURL = "https://api.giphy.com/v1/gifs/search?q=gosling&api_key=" + key + "&limit=10";
-console.log(gifURL);
+var gifLimit = "&limit=10";
+var gifURL = "https://api.giphy.com/v1/gifs/search?q=";
+// var gifURL = "https://api.giphy.com/v1/gifs/search?q=gosling&api_key=" + key + "&limit=10";
+var topics = ["gosling", "cats", "disney", "mustache", "babies", "falling", "will ferrell", "fail"];
+
+// playinng around here trying to split the strings in the array
+var urlTopics = split(topics);
+
+console.log(urlTopics);
 
 
 // FUNCTIONS
 // ===================================================
 
+
+
+// GAME LOGIC
+// ===================================================
 // hit the APIs
 $.ajax({
   url: gifURL,
@@ -54,6 +65,3 @@ $.ajax({
     }
   })
 })
-
-// GAME LOGIC
-// ===================================================
