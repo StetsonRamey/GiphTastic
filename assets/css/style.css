@@ -1,12 +1,30 @@
 button {
   margin: 10px 10px 50px 10px;
   padding: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .btn {
   border: 1px solid blue;
   color: blue;
+  width: 100px;
+  text-overflow: ellipsis;
 }
 .btn:hover {
   background: blue;
   color: white;
+}
+#buttons-view {
+  background: yellow;
+}
+
+#gif {
+  background: gray;
+}
+
+#input {
+background: green
+}
+.static, .dynamic {
+  margin: 10px;
 }
