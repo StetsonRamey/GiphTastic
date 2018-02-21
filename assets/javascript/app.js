@@ -91,10 +91,10 @@ $("#add-gif").on("click", function (event) {
   topics.push(gif);
   renderButtons();
   getGifURL();
+  // reset the form to the placeholder after running
   resetForm();
-})
-
-// reset the form field to original value
+});
+// reset the form field to original value -- little trick I found searching around
 function resetForm() {
   $("#gif-form")[0].reset();
 }

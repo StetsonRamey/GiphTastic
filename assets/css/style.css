@@ -7,7 +7,7 @@ button {
 .search-btn {
   border: 1px solid blue;
   color: blue;
-  width: 100px;
+  width: 120px;
   text-overflow: ellipsis;
 }
 .search-btn:hover {
@@ -25,17 +25,6 @@ button {
   background: blue;
   color: white;
 }
-#buttons-view {
-  background: yellow;
-}
-
-#gif {
-  background: gray;
-}
-
-/* #input {
-background: green
-} */
 .static, .dynamic {
   margin: 10px;
 }
