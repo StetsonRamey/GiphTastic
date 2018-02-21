@@ -16,7 +16,7 @@ function renderButtons() {
 
   for (var i = 0; i < topics.length; i++) {
     var a = $('<button type="button">');
-    a.addClass("btn");
+    a.addClass("btn search-btn");
     a.attr("data-name", topics[i]);
     a.text(topics[i]);
     $("#buttons-view").append(a);
@@ -25,7 +25,7 @@ function renderButtons() {
 // call the gifs in
 function getGifURL() {
   // now based on button clicked, I have to finish the URL
-  $(".btn").click(function() {
+  $(".search-btn").click(function() {
     var qSearch = $(this).attr("data-name");
     // testing & debugging
     // console.log(qSearch);
@@ -83,6 +83,22 @@ function animate() {
     $(this).attr("class", "static");
   }
 }
+
+// handler for adding movies with the input form
+$("#add-gif").on("click", function (event) {
+  event.preventDefault();
+  var gif = $("#gif-input").val().trim();
+  topics.push(gif);
+  renderButtons();
+  getGifURL();
+  resetForm();
+})
+
+// reset the form field to original value
+function resetForm() {
+  $("#gif-form")[0].reset();
+}
+
 
 
 

@@ -4,13 +4,13 @@ button {
   white-space: nowrap;
   overflow: hidden;
 }
-.btn {
+.search-btn {
   border: 1px solid blue;
   color: blue;
   width: 100px;
   text-overflow: ellipsis;
 }
-.btn:hover {
+.search-btn:hover {
   background: blue;
   color: white;
 }
