@@ -19,12 +19,14 @@ button {
   border: 1px solid blue;
   color: blue;
   width: 100%;
-  text-overflow: ellipsis;
 }
 .btn-submit:hover {
   background: blue;
   color: white;
 }
-.static, .dynamic {
+.gif-container {
   margin: 10px;
+}
+#input {
+  margin: 5% 0;
 }

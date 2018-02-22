@@ -27,17 +27,11 @@ function getGifURL() {
   // now based on button clicked, I have to finish the URL
   $(".search-btn").click(function() {
     var qSearch = $(this).attr("data-name");
-    // testing & debugging
-    // console.log(qSearch);
     // have to remove spaces if there are any
     var qSearchURL = qSearch.split(" ").join("+");
-    // testing & debugging
-    // console.log(qSearchURL);
     // put the URL together
     var gifURL = baseURL + qSearchURL + "&api_key=" + key + gifLimit;
-    // testing and debugging
-    // console.log(gifURL);
-
+    // run this function here so we have access to gifURL
     function getGifs() {
       // hit the APIs
       $.ajax({
@@ -46,12 +40,20 @@ function getGifURL() {
       }).then(function(response) {
 
         for (var i = 0; i < 10; i++) {
+
+          var gifDiv = $("<div>");
+          gifDiv.addClass("gif-container");
+          var rating = response.data[i].rating;
+          gifDiv.append("<p>" + rating + "</p>");
+
           var staticURL = response.data[i].images.fixed_height_small_still.url;
-          // console.log(gifURL);
           var still = $("<img>");
           still.attr("src", staticURL);
           still.addClass("static");
-          $("#gif").append(still);
+          gifDiv.append(still);
+
+          $("#gif").append(gifDiv);
+
         }
       });
     }
