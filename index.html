@@ -15,20 +15,32 @@
 
 <body>
 
+  <!-- jumbotron for header -->
   <div class="jumbotron jumbotron-fluid">
+    <!-- added a gif for the header -->
+    <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/l3E6z6QxD2uKoRTDq" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+    <p><a href="https://giphy.com/gifs/siliconvalleyhbo-l3E6z6QxD2uKoRTDq"></a></p>
+    <!-- end giphy hero -->
+    <!-- container for a little text -->
     <div class="container">
       <h1 class="display-4">Let's get Giffy</h1>
       <p class="lead">Click a button, type in the form to add your own button, have fun</p>
     </div>
+    <!-- end text container -->
   </div>
+  <!-- end jumbotron -->
 
+  <!-- container for the buttons -->
   <div class="container-fluid">
     <div class="col-12" id="buttons-view"></div>
   </div>
+  <!-- end buttons div -->
 
+  <!-- container for gifs and search field -->
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-12 col-md-8 d-flex flex-row flex-wrap" id="gif"></div>
+    <div class="row d-flex flex-md-row-reverse">
+
+      <!-- div for input form -->
       <div class="col-sm-12 col-md-4" id="input">
         <form id="gif-form">
           <div class="form-group">
@@ -38,8 +50,16 @@
           <button type="submit" class="btn btn-submit" id="add-gif">Submit</button>
         </form>
       </div>
+      <!-- end input form -->
+
+      <!-- div gifs will be put into -->
+      <div class="col-sm-12 col-md-8 d-flex flex-row flex-wrap" id="gif"></div>
+      <!-- end gifs -->
+
+
     </div>
   </div>
+  <!-- end div for gifs and search field -->
 
 
 

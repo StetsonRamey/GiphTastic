@@ -44,15 +44,16 @@ function getGifURL() {
           var gifDiv = $("<div>");
           gifDiv.addClass("gif-container");
           var rating = response.data[i].rating;
-          gifDiv.append("<p>" + rating + "</p>");
+          gifDiv.append("<p>Rating: " + rating + "</p>");
 
           var staticURL = response.data[i].images.fixed_height_small_still.url;
           var still = $("<img>");
           still.attr("src", staticURL);
+          still.attr("alt", qSearch + " is missing");
           still.addClass("static");
           gifDiv.append(still);
 
-          $("#gif").append(gifDiv);
+          $("#gif").prepend(gifDiv);
 
         }
       });

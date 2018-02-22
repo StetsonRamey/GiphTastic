@@ -1,3 +1,9 @@
+.jumbotron {
+  background: url("https://giphy.com/gifs/l3E6z6QxD2uKoRTDq/html5");
+  background-size: cover;
+  padding: 0;
+}
+
 button {
   margin: 10px 10px 50px 10px;
   padding: 0 10px;
