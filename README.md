@@ -6,7 +6,7 @@ Updated the portfolio page with link as well
 
 [Portfolio Page][1]
 
-[Trivia Game Page][2]
+[GifTastic Game Page][2]
 
 [1]: https://stetsonramey.github.io/Responsive-Portfolio/portfolio.html
 [2]: https://stetsonramey.github.io/GiphTastic/
