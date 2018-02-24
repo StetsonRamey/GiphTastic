@@ -1,5 +1,5 @@
 # Week-6 Game - GifTastic
-*Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.*
+*The week 6 game pulls the giphy API to display a set number (10) gifs to the page.  The page also displays the gifs rating, and you can pause/unpause the gifs with a click.  In addition to the preloaded gifs, a user can add buttons dynamically for search queries of their choosing*
 
 Updated the portfolio page with link as well
 
@@ -11,7 +11,6 @@ Updated the portfolio page with link as well
 [1]: https://stetsonramey.github.io/Responsive-Portfolio/portfolio.html
 [2]: https://stetsonramey.github.io/GiphTastic/
 
-
 Table of Contents
 =================
 <!--ts-->
@@ -19,23 +18,31 @@ Table of Contents
   * [Philosophy](#philosophy)
   * [Struggles](#struggles)
   * [Ideas for Improvement](#ideas-for-improvement)
+  * [Styling](#styling)
 <!--te-->
-
 
   Philosophy
   ==========
-  The idea on this one was to store variables in arrays and objects, or objects inside of arrays.  My goal was to make the whole game playable without re-loading the page.  Questions are to advance by themselves, and the game reset needed to be tied to a button at the end of the game.
-
+  The concept is simple:
+  * pull the giphy API
+  * have an initial array of topics
+  * when the page loads, render the array of topics to buttons
+  * when user clicks button, pull 10 gifs and load them to the page in a static state
+  * when you click a gif, it animates, click again, it pauses
+  * input form where you can type a query and it'll put a button on the page that works
 
   Struggles
   =========
-  I struggled with how to figure out if the user selected the right answer.  Basically, you have to take a question which is a string, and somehow convert that to a number to run through a boolean.  To do this, I ended up making using of the `indexOf()` method to find the position of the correct answer in the array, and then tying the user's answer to a number which I could check to see if that matched the position of the correct answer in the array.
+  The tough part was getting the gifs to animate.  I got through it before we went over it in class, and I realized after the way we did it in class is likely more correct (I'll add some thoughts in the Ideas for Improvement Section).  I noticed that static gifs have a `_s` in the URL.  So I researched some methods to split the string and then join it again, basically brute for manipulation of the URL.  
 
-  The other thing that I ended up looking up was what and how to tie function together.  I had a rough idea of what functions I would need, but I had to search out some help from other code for the loop to get the next question, and the code to check if the answer was right or not.
-
+  After that I manipulated the state by setting the state in the class of the container.  Similar to what we did in class, but slightly different.
 
   Ideas for Improvement
   =====================
-  I added the place for some gifs tied in with an API, but didn't have time to incorporate them.  Also, I'd like to know if there is a more efficient way to write this with less code.  What I have works, it just seemed like a lot of code for something so simple.  
+  Were I to do it over, I would modify the state based on the full URL.  In our case, it works fine, but if we were dealing with URLs that contained `_s` or even `_` earlier in the string, that'd be tough to deal with and would break the app.
 
-  Also, there's always room for improvement on the UI side of this.  Some different color text and other styling tweaks to clean up the look could help the whole game experience.
+  Styling
+  =======
+  I added the gif in the header of the page for fun.  I did it with the embed code straight from giphy, and I notice that on hover the right side icons for share and giphy don't show up right.  I could mess with that I think to get it working correctly.
+
+  I played with the responsive settings in bootstrap and got things to jump around the way I wanted them to for mobile, so I'm happy with buttons and input form.  I'd like to mess with the gifs themselves, perhaps making them bigger, messing with sizing, cleaning up the styling for the rating, just small stuff like that.

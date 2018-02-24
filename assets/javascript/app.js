@@ -66,12 +66,13 @@ function getGifURL() {
 function animate() {
   // store the url of the clicked gif in a variable
   var clickedURL = $(this).attr("src");
+  // set a state varialbe to the initial case
   var state = $(this).attr("class");
   // testing and debugging
   console.log(state);
   // run a test so we know what state the gif is in
   if (state === 'static') {
-    // if the gif is static, animate it and set the state to running
+    // if the gif is static, animate it and set the state to dynamic
     var dynamicURL = clickedURL.split('_s').join('');
     // push it to the screen
     $(this).attr("src", dynamicURL);
@@ -88,7 +89,7 @@ function animate() {
 }
 
 // handler for adding movies with the input form
-$("#add-gif").on("click", function (event) {
+$("#add-gif").on("click", function(event) {
   event.preventDefault();
   var gif = $("#gif-input").val().trim();
   topics.push(gif);
@@ -101,6 +102,7 @@ $("#add-gif").on("click", function (event) {
 function resetForm() {
   $("#gif-form")[0].reset();
 }
+
 
 
 
